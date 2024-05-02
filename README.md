@@ -7,7 +7,7 @@ and semicolon-terminated expression within the function, to assist in debugging
 when a backtrace is not available or when behavior needs to be assessed at runtime.
 
 ## Use
-1. Add `anal_eyes` to your project
+1. Add `anal-eyes` to your project
 ```
 $ cargo add anal_eyes
 ```
