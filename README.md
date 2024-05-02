@@ -56,7 +56,7 @@ Executing 'funky'
  funky, declaration 1
 Executing 'see'
 
-( ... )
+{ ... }
 
 Executing 'funky'
  funky, declaration 1
