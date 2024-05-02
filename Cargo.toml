@@ -1,0 +1,19 @@
+
+[package]
+name = "anal-eyes"
+description = "Attribute macro to quickly add crude debugging markers to functions"
+authors = ["j-stach"]
+version = "0.0.0"
+edition = "2021"
+repository = "https://github.com/j-stach/anal-eyes"
+license = "MIT OR Apache-2.0"
+readme = "README.md"
+categories = ["development-tools"]
+
+[lib]
+proc-macro = true
+
+[dependencies]
+proc-macro2 = "1.0.81"
+quote = "1.0.36"
+syn = { version = "2.0.60", features = ["full"] }
