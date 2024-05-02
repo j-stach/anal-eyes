@@ -3,7 +3,6 @@ use anal_eyes::anal_eyes;
 use rand::{ Rng, rngs::ThreadRng };
 
 
-#[allow(dead_code)]
 struct Junk;
 impl Junk {
     #[anal_eyes]

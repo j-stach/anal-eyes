@@ -13,24 +13,65 @@ cargo add anal_eyes
 ```
 Insert the attribute `#[anal_eyes]` above your troublesome function(s):
 ```
-#[anal_eyes]
-fn funky(monkey: Self) -> Self {
-    if monkey.see() {
-        monkey.r#do()
-    } else {
-        funky(monkey)
-    }
-}
-```
-Profit. See `examples/funky_junk.rs` for a more complete example.
+use anal_eyes::anal_eyes;
+use rand::{ Rng, rngs::ThreadRng };
 
+struct Junk;
+impl Junk {
+    #[anal_eyes]
+    fn see(&self, no_evil: &mut ThreadRng) -> bool {
+        no_evil.gen_range(0..3) == 3
+    }
+    #[anal_eyes]
+    fn r#do(&self) -> Self { Junk }
+
+    #[anal_eyes]
+    fn funky(monkey: Self) -> Self {
+        let mut no_evil = rand::thread_rng();
+        if monkey.see(&mut no_evil) {
+            monkey.r#do()
+        } else {
+            Self::funky(monkey)
+        }
+    }
+
+}
+
+#[anal_eyes]
+fn main() {
+    Junk::funky(Junk);
+}
+
+```
+Profit:
+```
+Executing 'main'
+Executing 'funky'
+ funky, declaration 1
+Executing 'see'
+Executing 'funky'
+ funky, declaration 1
+Executing 'see'
+Executing 'funky'
+ funky, declaration 1
+Executing 'see'
+
+( ... )
+
+Executing 'funky'
+ funky, declaration 1
+Executing 'see'
+
+thread 'main' has overflowed its stack
+fatal runtime error: stack overflow
+
+```
 
 ## Future directions
 I'm developing this crate primarily for personal use so I'll only be expanding it
-as the need arises. If you have any ideas in the meantime, feel free to fork!
-- [ ] Convention for nested function declarations
+as the need arises. Feel free to fork!
 - [ ] More flexibility with template formatting
-- [ ] Expression values reflected in println invoction
+- [ ] Expression values extracted & reflected in println
 
 ## Disclaimer
 The name has a dual-meaning; it is a childish play on the word "analyze", referencing

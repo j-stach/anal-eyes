@@ -32,7 +32,7 @@ pub fn anal_eyes(_attr: TokenStream, item: TokenStream) -> TokenStream {
 fn insert_print_statements(fn_name: &str, block: &Block) -> proc_macro2::TokenStream {
     let mut statements = block.stmts.iter().peekable();
     let mut debug_statements = quote! {
-        println!("Executing function '{}'", #fn_name);
+        println!("Executing '{}'", #fn_name);
     };
 
     let mut locals = 0u32;
@@ -64,20 +64,20 @@ fn insert_print_statements(fn_name: &str, block: &Block) -> proc_macro2::TokenSt
     debug_statements
 }
 
-// TODO Get local info and print
+// TODO Get local info to print
 fn debug_local(_local: &syn::Local, fn_name: &str, count: &mut u32) -> proc_macro2::TokenStream {
     *count += 1;
     quote! { println!(" {}, declaration {}", #fn_name, #count); }
 }
 
 
-// TODO Get item info and print
+// TODO Get item info to print
 fn debug_item(_item: &syn::Item, fn_name: &str, count: &mut u32) -> proc_macro2::TokenStream {
     *count += 1;
-    quote! { println!(" {}, subItem {}", #fn_name, #count); }
+    quote! { println!(" {}, sub-item {}", #fn_name, #count); }
 }
 
-// TODO Get expr info and print
+// TODO Get expr info to print
 fn debug_expr(_expr: &syn::Expr, fn_name: &str, count: &mut u32) -> proc_macro2::TokenStream {
     *count += 1;
     quote! { println!(" {}, expression {}", #fn_name, #count); }
