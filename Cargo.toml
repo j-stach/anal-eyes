@@ -8,7 +8,7 @@ edition = "2021"
 repository = "https://github.com/j-stach/anal-eyes"
 license = "MIT OR Apache-2.0"
 readme = "README.md"
-categories = ["development-tools"]
+categories = ["development-tools::debugging"]
 
 [lib]
 proc-macro = true
