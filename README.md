@@ -7,11 +7,11 @@ and semicolon-terminated expression within the function, to assist in debugging
 when a backtrace is not available or when behavior needs to be assessed at runtime.
 
 ## Use
-Add anal-eyes to the project:
+1. Add `anal_eyes` to your project
 ```
-cargo add anal_eyes
+$ cargo add anal_eyes
 ```
-Insert the attribute `#[anal_eyes]` above your troublesome function(s):
+2. Insert the attribute `#[anal_eyes]` above your troublesome function(s)
 ```
 use anal_eyes::anal_eyes;
 use rand::{ Rng, rngs::ThreadRng };
@@ -43,7 +43,11 @@ fn main() {
 }
 
 ```
-Profit:
+3. ???
+```
+$ cargo run
+```
+4. Profit
 ```
 Executing 'main'
 Executing 'funky'
@@ -73,6 +77,7 @@ as the need arises. Feel free to fork!
 - [ ] More flexibility with template formatting
 - [ ] Expression values extracted & reflected in println
 - [ ] Code line and column
+- [ ] Tool for auto-cleanup of attributes
 
 ## Disclaimer
 The name is a childish play on the word "analyze", referencing the trait of 
