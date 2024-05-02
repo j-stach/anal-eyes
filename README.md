@@ -11,7 +11,7 @@ when a backtrace is not available or when behavior needs to be assessed at runti
 ```
 $ cargo add anal_eyes
 ```
-2. Insert the attribute `#[anal_eyes]` above your troublesome function(s)
+2. Place the attribute `#[anal_eyes]` above your troublesome function(s)
 ```
 use anal_eyes::anal_eyes;
 use rand::{ Rng, rngs::ThreadRng };
