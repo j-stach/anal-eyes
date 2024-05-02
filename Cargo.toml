@@ -3,7 +3,7 @@
 name = "anal-eyes"
 description = "Attribute macro to quickly add crude debugging markers to functions"
 authors = ["j-stach"]
-version = "0.0.0"
+version = "0.0.1"
 edition = "2021"
 repository = "https://github.com/j-stach/anal-eyes"
 license = "MIT OR Apache-2.0"
