@@ -30,7 +30,7 @@ pub fn anal_eyes(_attr: TokenStream, item: TokenStream) -> TokenStream {
 }
 
 fn insert_print_statements(fn_name: &str, block: &Block) -> proc_macro2::TokenStream {
-    let mut statements = block.stmts.iter().peekable();
+    let mut statements = block.stmts.iter();
     let mut debug_statements = quote! {
         println!("Executing '{}'", #fn_name);
     };
@@ -40,7 +40,7 @@ fn insert_print_statements(fn_name: &str, block: &Block) -> proc_macro2::TokenSt
     let mut items = 0u32;
 
     // Does not need to peek because Expr branch only matches if there's a semicolon,
-    // meaning it should not place a println! after returns statements.
+    // meaning it should not place a println! after return statements.
     while let Some(stmt) = statements.next() {
         let debug = match stmt {
             Stmt::Local(l) => { debug_local(&l, fn_name, &mut locals) },
