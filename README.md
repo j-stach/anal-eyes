@@ -72,7 +72,7 @@ fatal runtime error: stack overflow
 
 ## Future directions
 I'm developing this crate primarily for personal use so I'll only be expanding it
-as the need arises. Feel free to fork!
+as the need arises.
 - [ ] More flexibility with template formatting
 - [ ] Expression values extracted & reflected in println
 - [ ] Code line and column
