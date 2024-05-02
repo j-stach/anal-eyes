@@ -9,7 +9,7 @@ when a backtrace is not available or when behavior needs to be assessed at runti
 ## Use
 1. Add `anal-eyes` to your project
 ```
-$ cargo add anal_eyes
+$ cargo add anal-eyes
 ```
 2. Place the attribute `#[anal_eyes]` above your troublesome function(s)
 ```
