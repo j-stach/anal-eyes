@@ -1,5 +1,5 @@
 
-# anal-eyes  \*_\*
+# anal-eyes  \* ͜\*
 Attribute macro to quickly add crude debugging markers to functions. <br>
 
 Inserts a `println!` statement following every variable declaration
@@ -72,7 +72,8 @@ I'm developing this crate primarily for personal use so I'll only be expanding i
 as the need arises. Feel free to fork!
 - [ ] More flexibility with template formatting
 - [ ] Expression values extracted & reflected in println
+- [ ] Code line and column
 
 ## Disclaimer
-The name has a dual-meaning: it is a childish play on the word "analyze", referencing
-the trait of "anal-retentiveness" in the context of code scrutiny. Don't ban me!
+The name is a childish play on the word "analyze", referencing the trait of 
+"anal-retentiveness" in the context of code scrutiny. <br> Don't ban me!
