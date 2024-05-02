@@ -74,5 +74,5 @@ as the need arises. Feel free to fork!
 - [ ] Expression values extracted & reflected in println
 
 ## Disclaimer
-The name has a dual-meaning; it is a childish play on the word "analyze", referencing
+The name has a dual-meaning: it is a childish play on the word "analyze", referencing
 the trait of "anal-retentiveness" in the context of code scrutiny. Don't ban me!
