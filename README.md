@@ -79,5 +79,5 @@ as the need arises. Feel free to fork!
 - [ ] Tool for auto-cleanup of attributes
 
 ## Disclaimer
-The name is a childish play on the word "analyze", referencing the trait of 
+The name is an immature play on the word "analyze", referencing the trait of 
 "anal-retentiveness" in the context of code scrutiny. <br> Don't ban me!
