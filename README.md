@@ -7,11 +7,11 @@ and semicolon-terminated expression within the function, to assist in debugging
 when a backtrace is not available or when behavior needs to be assessed at runtime.
 
 ## Use
-1. Add `anal_eyes` to your project
+1. Add `anal-eyes` to your project
 ```
 $ cargo add anal_eyes
 ```
-2. Insert the attribute `#[anal_eyes]` above your troublesome function(s)
+2. Place the attribute `#[anal_eyes]` above your troublesome function(s)
 ```
 use anal_eyes::anal_eyes;
 use rand::{ Rng, rngs::ThreadRng };
@@ -72,7 +72,7 @@ fatal runtime error: stack overflow
 
 ## Future directions
 I'm developing this crate primarily for personal use so I'll only be expanding it
-as the need arises. Feel free to fork!
+as the need arises.
 - [ ] More flexibility with template formatting
 - [ ] Expression values extracted & reflected in println
 - [ ] Code line and column
